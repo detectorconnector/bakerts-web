@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Baker Tech Services</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><!-- same header across pages --></header>
+  <!-- Shared Header -->
+  <header>... (as above) ...</header>
 
-  <main class="hero">
-    <h1>Your destination for all things technology</h1>
-    <p>Your source for computer help. Reliable IT, security, AV & VoIP in Owatonna, MN.</p>
-    <nav class="hero-links">
-      <a href="why-us.html">Why Us</a>
-      <a href="services.html">Our Services</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Your destination for all things technology</h1>
+        <p>Your source for computer help. Reliable IT, security, AV & VoIP in Owatonna, MN.</p>
+        <div class="hero-buttons">
+          <a href="why-us.html" class="btn">Learn More</a>
+          <a href="contact.html" class="btn">Contact Us</a>
+          <a href="#" class="btn">Client Portal</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach">
+      <div class="container">
+        <h2>Our Approach</h2>
+        <p>At Baker Tech Services, we are dedicated to providing “Endless Solutions for Success.” Whether it's managed IT, AV, low voltage systems, or innovative tech projects, we design, install, and support everything with local expertise, personalized service, and proven results.</p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2>What People Say</h2>
+        <blockquote>
+          “Nolan and his crew did a great job with our network, sound system, and security setup. He designed all of it, and it is proving to be exceptional. He has also been very responsive following installation”<br>
+          <strong>- Mineral Springs Brewery</strong>
+        </blockquote>
+      </div>
+    </section>
   </main>
 
-  <footer><!-- same footer --></footer>
+  <!-- Shared Footer -->
+  <footer>... (as above) ...</footer>
+
+  <script>
+    // Mobile nav toggle
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+    btn.addEventListener('click', () => nav.classList.toggle('active'));
+  </script>
 </body>
 </html>
