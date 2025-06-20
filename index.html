@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Baker Tech Services</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Shared Header -->
-  <header>... (as above) ...</header>
+  <!-- Dynamic Header -->
+  <div id="header"></div>
 
   <main>
     <section class="hero">
@@ -25,7 +26,12 @@
     <section class="approach">
       <div class="container">
         <h2>Our Approach</h2>
-        <p>At Baker Tech Services, we are dedicated to providing “Endless Solutions for Success.” Whether it's managed IT, AV, low voltage systems, or innovative tech projects, we design, install, and support everything with local expertise, personalized service, and proven results.</p>
+        <p>
+          At Baker Tech Services, we are dedicated to providing “Endless Solutions for Success.”
+          Whether it's managed IT, AV, low voltage systems, or innovative tech projects,
+          we design, install, and support everything with local expertise, personalized service,
+          and proven results.
+        </p>
       </div>
     </section>
 
@@ -33,41 +39,42 @@
       <div class="container">
         <h2>What People Say</h2>
         <blockquote>
-          “Nolan and his crew did a great job with our network, sound system, and security setup. He designed all of it, and it is proving to be exceptional. He has also been very responsive following installation”<br>
+          “Nolan and his crew did a great job with our network, sound system, and security setup.
+          He designed all of it, and it is proving to be exceptional.
+          He has also been very responsive following installation.”<br />
           <strong>- Mineral Springs Brewery</strong>
         </blockquote>
       </div>
     </section>
   </main>
 
-  <!-- Shared Footer -->
-  <footer>... (as above) ...</footer>
-
-  <script>
-    // Mobile nav toggle
-    const btn = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.site-nav');
-    btn.addEventListener('click', () => nav.classList.toggle('active'));
-  </script>
-</body>
-</html>
-
-
-<body>
-  <div id="header"></div>
-
-  <!-- Your page content -->
-
+  <!-- Dynamic Footer -->
   <div id="footer"></div>
 
+  <!-- Scripts -->
   <script>
+    // Load shared header and footer
     async function loadFragment(id, url) {
-      const res = await fetch(url);
-      const html = await res.text();
-      document.getElementById(id).innerHTML = html;
+      try {
+        const res = await fetch(url);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+      } catch (err) {
+        console.error(`Failed to load ${url}`, err);
+      }
     }
 
     loadFragment("header", "header.html");
     loadFragment("footer", "footer.html");
+
+    // Handle mobile nav toggle (after header loads)
+    document.addEventListener("click", (e) => {
+      if (e.target.classList.contains("nav-toggle")) {
+        const nav = document.querySelector(".site-nav");
+        if (nav) nav.classList.toggle("active");
+      }
+    });
   </script>
 </body>
+</html>
+
