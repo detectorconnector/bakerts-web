@@ -1,1 +1,30 @@
+/* Basic Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; line-height:1.6; color:#333; }
+.container { max-width:960px; margin:0 auto; padding:20px; }
 
+/* Header */
+header { background:#f8f7f7; padding:20px 0; border-bottom:1px solid #ddd; }
+header h1 a { text-decoration:none; color:#333; font-size:1.8em; }
+nav ul { list-style:none; display:flex; gap:15px; }
+nav a { text-decoration:none; color:#333; }
+
+/* Hero */
+#hero { background:#ffeee5; padding:60px 0; text-align:center; }
+#hero h2 { font-size:2.4em; margin-bottom:10px; }
+#hero p { font-size:1.2em; margin-bottom:20px; }
+.btn { background:#e67300; color:#fff; padding:12px 24px; text-decoration:none; border-radius:4px; }
+
+/* Sections */
+section { padding:40px 0; }
+#gallery .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:15px; }
+#gallery img { width:100%; border-radius:8px; }
+
+/* Footer */
+footer { background:#f8f7f7; padding:20px 0; border-top:1px solid #ddd; text-align:center; }
+footer a { color:#e67300; }
+
+/* Responsive */
+@media(max-width:600px){
+  nav ul { flex-direction:column; text-align:center; }
+}
