@@ -51,3 +51,23 @@
   </script>
 </body>
 </html>
+
+
+<body>
+  <div id="header"></div>
+
+  <!-- Your page content -->
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadFragment(id, url) {
+      const res = await fetch(url);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadFragment("header", "header.html");
+    loadFragment("footer", "footer.html");
+  </script>
+</body>
