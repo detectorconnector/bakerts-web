@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bakerts</title>
+  <title>Baker Tech Services | Owatonna, MN</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <h1><a href="/">Bakerts</a></h1>
+      <img src="assets/logo.png" alt="Baker Tech Services logo" class="logo">
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -22,52 +23,54 @@
 
   <section id="hero">
     <div class="container">
-      <h2>Delicious Treats, Baked Fresh Every Day</h2>
-      <p>Explore our handcrafted pastries, cakes, and breads.</p>
-      <a href="#gallery" class="btn">View Gallery</a>
+      <h1>Your Destination for All Things Technology</h1>
+      <p>Reliable IT, low‑voltage, security, AV, VoIP & more for Southern Minnesota businesses.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="why-us">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="features">
+        <div><h3>Local & Personal</h3><p>Family‑owned since 2020, serving Owatonna with dedicated, local support.</p></div>
+        <div><h3>Cost‑Effective</h3><p>Affordable solutions without compromising quality.</p></div>
+        <div><h3>Proactive</h3><p>We monitor everything: servers, networks, cameras, VoIP—before issues arise.</p></div>
+        <div><h3>Innovative</h3><p>Fresh ideas and cutting‑edge technology tailored to your needs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div><h3>Managed IT Services</h3></div>
+        <div><h3>Physical Security</h3></div>
+        <div><h3>VoIP & Communication</h3></div>
+        <div><h3>Audio Visual Solutions</h3></div>
+        <div><h3>Farm & Industrial Tech</h3></div>
+        <div><h3>Specialty Projects</h3></div>
+      </div>
     </div>
   </section>
 
   <section id="about">
     <div class="container">
-      <h2>About Bakerts</h2>
-      <p>Bakerts is a family‑owned bakery dedicated to bringing fresh, artisanal baked goods to our community. From flaky croissants to rich layer cakes, every item is made with heart (and the best ingredients!).</p>
+      <h2>About Us</h2>
+      <p>Baker Tech Services LLC started in 2020 by Nolan Baker and expanded to a team of skilled professionals. Our mission: “Endless Solutions for Success,” providing reliable, cost-effective tech and low-voltage services to local businesses :contentReference[oaicite:2]{index=2}.</p>
     </div>
   </section>
 
-  <section id="gallery">
+  <footer id="contact">
     <div class="container">
-      <h2>Gallery</h2>
-      <div class="grid">
-        <img src="assets/bakery1.jpg" alt="Pastries display">
-        <img src="assets/bakery2.jpg" alt="Artisan bread">
-        <img src="assets/bakery3.jpg" alt="Layer cakes">
-        <img src="assets/bakery4.jpg" alt="Cakes and cupcakes">
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@bakerts.com">info@bakerts.com</a><br>
-        Phone: (123) 456‑7890</p>
-      </div>
-      <p>&copy; 2025 Bakerts. All Rights Reserved.</p>
+      <h2>Contact Us</h2>
+      <p>📍 1607 State Ave, Owatonna, MN 55060<br>
+         📞 (507) 414‑7800<br>
+         ✉️ <a href="mailto:info@bakerts.com">info@bakerts.com</a></p>
+      <p>&copy; 2025 Baker Tech Services LLC.</p>
     </div>
   </footer>
 
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
 </body>
 </html>
